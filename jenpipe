@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                javac samplepro.java
                 echo 'Build in Progress'
             }
         }
@@ -14,8 +13,8 @@ pipeline {
             }
         }
         stage('Deploy') {
-            steps {
-                java samplepro
+            steps {           
+                bat 'node first'
                 echo 'Deploying'
             }
         }
